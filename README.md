@@ -44,7 +44,11 @@
     -   SMARTステータス (`smartctl` - 検出された全ディスク `/dev/sd*`, `/dev/nvme*`)
 -   レポートは `hardware_reports/` ディレクトリに保存されます。
 
-### 4. セルフホストアプリ (Self-Hosted Apps) [実装予定]
+### 4. Docker のインストール (Install Docker)
+-   公式リポジトリから Docker Engine と Docker Compose プラグインをインストールします。
+-   現在のユーザーを `docker` グループに追加します (sudoなしで実行可能にするため)。
+
+### 5. セルフホストアプリ (Self-Hosted Apps) [実装予定]
 -   検証用の各種セルフホストアプリケーションを簡単にインストール・アンインストールする機能。
 
 ## ディレクトリ構成
