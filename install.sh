@@ -23,7 +23,7 @@ main() {
                 bash "$(dirname "$0")/scripts/setup-preferences.sh"
                 ;;
             "Check Hardware")
-                warn "Hardware check not implemented yet."
+                bash "$(dirname "$0")/scripts/check-hardware.sh"
                 ;;
             "Quit")
                 break
