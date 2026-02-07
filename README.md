@@ -48,7 +48,11 @@
 -   公式リポジトリから Docker Engine と Docker Compose プラグインをインストールします。
 -   現在のユーザーを `docker` グループに追加します (sudoなしで実行可能にするため)。
 
-### 5. セルフホストアプリ (Self-Hosted Apps) [実装予定]
+### 5. Node.js のインストール (Install Node.js)
+-   **fnm (Fast Node Manager)** を使用して Node.js 環境を構築します。
+-   最新の LTS バージョンをインストールし、`.bashrc` / `.zshrc` に設定を追加します。
+
+### 6. セルフホストアプリ (Self-Hosted Apps) [実装予定]
 -   検証用の各種セルフホストアプリケーションを簡単にインストール・アンインストールする機能。
 
 ## ディレクトリ構成

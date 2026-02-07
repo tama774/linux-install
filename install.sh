@@ -11,7 +11,7 @@ main() {
     echo "-------------------------"
 
     PS3="Please select an option: "
-    options=("Install CLI Tools" "Install Docker" "Setup Preferences" "Check Hardware" "Quit")
+    options=("Install CLI Tools" "Install Docker" "Install Node.js" "Setup Preferences" "Check Hardware" "Quit")
     
     select opt in "${options[@]}"
     do
@@ -26,6 +26,10 @@ main() {
                 ;;
             "Install Docker")
                 bash "$(dirname "$0")/scripts/install-docker.sh"
+                break
+                ;;
+            "Install Node.js")
+                bash "$(dirname "$0")/scripts/install-node.sh"
                 break
                 ;;
             "Check Hardware")
