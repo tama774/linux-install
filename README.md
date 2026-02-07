@@ -23,7 +23,7 @@
 
 ### 1. CLI ツールのインストール (Install CLI Tools)
 基本的なコマンドラインツール群をインストールします。
--   **Linux Mint Xfce**: `git`, `curl`, `wget`, `vim`, `htop`, `tmux`, `zsh`, `smartmontools`, `tlp`
+-   **Linux Mint Xfce**: `git`, `curl`, `wget`, `vim`, `emacs`, `htop`, `tmux`, `zsh`, `smartmontools`, `tlp`, `imagemagick`
 
 ### 2. 環境設定 (Setup Preferences)
 ターミナルでの作業を快適にするためのユーザー設定を行います。
