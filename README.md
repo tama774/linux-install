@@ -23,7 +23,7 @@
 
 ### 1. CLI ツールのインストール (Install CLI Tools)
 基本的なコマンドラインツール群をインストールします。
--   **Linux Mint Xfce**: `git`, `curl`, `wget`, `vim`, `emacs`, `htop`, `tmux`, `zsh`, `smartmontools`, `tlp`, `imagemagick`
+-   **Linux Mint Xfce**: `git`, `curl`, `wget`, `vim`, `emacs`, `htop`, `tmux`, `zsh`, `smartmontools`, `tlp`, `imagemagick`, `fzf`
 
 ### 2. 環境設定 (Setup Preferences)
 ターミナルでの作業を快適にするためのユーザー設定を行います。
@@ -56,6 +56,9 @@
 -   **goenv** を使用して Go 環境を構築します。
 -   最新の Go バージョンをインストールします。
 -   リポジトリ管理ツール **ghq** を `go install` でインストールします。
+-   **fzf** と連携したエイリアス `g` を設定します:
+    -   `alias g='cd $(ghq root)/$(ghq list | fzf)'`
+    -   これにより、`g` コマンドでリポジトリをインクリメンタルサーチして移動できるようになります。
 
 ### 7. セルフホストアプリ (Self-Hosted Apps) [実装予定]
 -   検証用の各種セルフホストアプリケーションを簡単にインストール・アンインストールする機能。

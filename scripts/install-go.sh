@@ -93,6 +93,29 @@ install_go() {
         info "ghq installed."
     fi
 
+    info "Configuring 'g' alias for ghq+fzf..."
+    local g_alias="alias g='cd \$(ghq root)/\$(ghq list | fzf)'"
+    
+    # Check for bash
+    if [ -f "$HOME/.bashrc" ]; then
+        if ! grep -q "alias g=" "$HOME/.bashrc"; then
+            echo '' >> "$HOME/.bashrc"
+            echo '# ghq + fzf alias' >> "$HOME/.bashrc"
+            echo "$g_alias" >> "$HOME/.bashrc"
+            info "Added 'g' alias to .bashrc"
+        fi
+    fi
+
+    # Check for zsh
+    if [ -f "$HOME/.zshrc" ]; then
+        if ! grep -q "alias g=" "$HOME/.zshrc"; then
+            echo '' >> "$HOME/.zshrc"
+            echo '# ghq + fzf alias' >> "$HOME/.zshrc"
+            echo "$g_alias" >> "$HOME/.zshrc"
+            info "Added 'g' alias to .zshrc"
+        fi
+    fi
+
     info "Go and ghq installation complete."
     warn "Please restart your shell to apply changes."
 }
