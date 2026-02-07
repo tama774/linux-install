@@ -22,8 +22,7 @@
 
 ### 1. CLI ツールのインストール (Install CLI Tools)
 基本的なコマンドラインツール群をインストールします。
--   **Debian/Ubuntu**: `git`, `curl`, `wget`, `vim`, `htop`, `tmux`, `zsh`
--   **Arch Linux**: `git`, `curl`, `wget`, `vim`, `htop`, `tmux`, `zsh`
+-   **Linux Mint Xfce**: `git`, `curl`, `wget`, `vim`, `htop`, `tmux`, `zsh`
 
 ### 2. 環境設定 (Setup Preferences)
 ターミナルでの作業を快適にするためのユーザー設定を行います。

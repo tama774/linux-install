@@ -10,7 +10,7 @@ install_cli_tools() {
     info "Installing CLI tools: $packages"
 
     case "$distro" in
-        ubuntu|debian)
+        ubuntu|debian|linuxmint)
             sudo apt update
             sudo apt install -y $packages
             ;;
