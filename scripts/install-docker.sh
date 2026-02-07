@@ -51,6 +51,14 @@ install_docker() {
     info "Adding user to docker group..."
     sudo usermod -aG docker "$USER"
     
+    info "Installing lazydocker..."
+    if command -v lazydocker &> /dev/null; then
+        info "lazydocker is already installed."
+    else
+        curl https://raw.githubusercontent.com/jesseduffield/lazydocker/master/scripts/install_update_linux.sh | bash
+        info "lazydocker installed."
+    fi
+    
     info "Docker installation complete."
     warn "You need to log out and log back in for group changes to take effect."
     warn "Or run 'newgrp docker' to activate the changes in the current shell."

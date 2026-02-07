@@ -53,6 +53,7 @@
 ### 4. Docker のインストール (Install Docker)
 -   公式リポジトリから Docker Engine と Docker Compose プラグインをインストールします。
 -   現在のユーザーを `docker` グループに追加します (sudoなしで実行可能にするため)。
+-   **lazydocker** (Docker用TUIツール) をインストールします。
 
 ### 5. Node.js のインストール (Install Node.js)
 -   **fnm (Fast Node Manager)** を使用して Node.js 環境を構築します。
