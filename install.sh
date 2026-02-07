@@ -18,12 +18,15 @@ main() {
         case $opt in
             "Install CLI Tools")
                 bash "$(dirname "$0")/scripts/install-cli.sh"
+                break
                 ;;
             "Setup Preferences")
                 bash "$(dirname "$0")/scripts/setup-preferences.sh"
+                break
                 ;;
             "Check Hardware")
                 bash "$(dirname "$0")/scripts/check-hardware.sh"
+                break
                 ;;
             "Quit")
                 break

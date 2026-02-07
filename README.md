@@ -17,12 +17,13 @@
     ```
 
 3.  メニューから実行したいオプションを選択してください。
+    (オプションを選択すると、その処理を実行してスクリプトは終了します)
 
 ## 機能と役割
 
 ### 1. CLI ツールのインストール (Install CLI Tools)
 基本的なコマンドラインツール群をインストールします。
--   **Linux Mint Xfce**: `git`, `curl`, `wget`, `vim`, `htop`, `tmux`, `zsh`
+-   **Linux Mint Xfce**: `git`, `curl`, `wget`, `vim`, `htop`, `tmux`, `zsh`, `smartmontools`, `tlp`
 
 ### 2. 環境設定 (Setup Preferences)
 ターミナルでの作業を快適にするためのユーザー設定を行います。
@@ -30,8 +31,18 @@
     -   `~/.profile` に `/usr/bin/setxkbmap -option "ctrl:swapcaps"` を追加します。
     -   ログイン後 (X11環境) に、Caps Lock キーが Control キーとして動作するようになります。
 
-### 3. ハードウェアチェック (Check Hardware) [実装予定]
--   SSD の健全性確認、パフォーマンスベンチマーク、ドライバの状態確認などを行うスクリプト。
+### 3. ハードウェアチェック (Check Hardware)
+ハードウェア情報を収集し、レポートファイルとして保存します。
+-   取得情報:
+    -   CPU情報 (`lscpu`)
+    -   メモリ情報 (`free`)
+    -   ディスク使用量 (`df`)
+    -   ブロックデバイス情報 (`lsblk`)
+    -   ネットワーク情報 (`ip addr`)
+    -   PCIデバイス情報 (`lspci` - VGA/Network)
+    -   温度情報 (`sensors` - あれがインストールされている場合)
+    -   SMARTステータス (`smartctl` - `/dev/sda`、インストールされている場合)
+-   レポートは `hardware_reports/` ディレクトリに保存されます。
 
 ### 4. セルフホストアプリ (Self-Hosted Apps) [実装予定]
 -   検証用の各種セルフホストアプリケーションを簡単にインストール・アンインストールする機能。
@@ -42,3 +53,4 @@
     -   `common/utils.sh`: ヘルパー関数とディストリビューション検出ロジック。
     -   `install-cli.sh`: CLI ツールインストールのロジック。
     -   `setup-preferences.sh`: ユーザー設定適用のロジック。
+    -   `check-hardware.sh`: ハードウェア情報収集とレポート生成のロジック。

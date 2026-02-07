@@ -4,7 +4,7 @@ source "$(dirname "$0")/common/utils.sh"
 
 install_cli_tools() {
     local distro=$(detect_distro)
-    local packages="git curl wget vim htop tmux zsh smartmontools"
+    local packages="git curl wget vim htop tmux zsh smartmontools tlp"
 
     info "Detected distribution: $distro"
     info "Installing CLI tools: $packages"
