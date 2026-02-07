@@ -11,7 +11,7 @@ main() {
     echo "-------------------------"
 
     PS3="Please select an option: "
-    options=("Install CLI Tools" "Install Docker" "Install Node.js" "Install Go & ghq" "Setup Preferences" "Check Hardware" "Quit")
+    options=("Install CLI Tools" "Install Docker" "Install Node.js" "Install Go & ghq" "Install Wine & Winetricks" "Setup Preferences" "Check Hardware" "Quit")
     
     select opt in "${options[@]}"
     do
@@ -34,6 +34,14 @@ main() {
                 ;;
             "Install Go & ghq")
                 bash "$(dirname "$0")/scripts/install-go.sh"
+                break
+                ;;
+            "Install Go & ghq")
+                bash "$(dirname "$0")/scripts/install-go.sh"
+                break
+                ;;
+            "Install Wine & Winetricks")
+                bash "$(dirname "$0")/scripts/install-wine.sh"
                 break
                 ;;
             "Check Hardware")

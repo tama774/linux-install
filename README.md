@@ -66,7 +66,11 @@
     -   `alias g='cd $(ghq root)/$(ghq list | fzf)'`
     -   これにより、`g` コマンドでリポジトリをインクリメンタルサーチして移動できるようになります。
 
-### 7. セルフホストアプリ (Self-Hosted Apps) [実装予定]
+### 7. Wine & Winetricks のインストール (Install Wine & Winetricks)
+-   **WineHQ** 公式リポジトリから安定版 (`wine-stable`) をインストールします。
+-   **Winetricks** をインストールし、日本語フォント (`cjkfonts`) を自動でセットアップします。
+
+### 8. セルフホストアプリ (Self-Hosted Apps) [実装予定]
 -   検証用の各種セルフホストアプリケーションを簡単にインストール・アンインストールする機能。
 
 ## ディレクトリ構成
