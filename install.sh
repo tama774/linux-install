@@ -11,7 +11,7 @@ main() {
     echo "-------------------------"
 
     PS3="Please select an option: "
-    options=("Install CLI Tools" "Install Docker" "Install Node.js" "Install Go & ghq" "Install Wine & Winetricks" "Setup Preferences" "Check Hardware" "Quit")
+    options=("Install CLI Tools" "Install Docker" "Install Node.js" "Install Go & ghq" "Install Wine & Winetricks" "Install Self-Hosted Apps" "Setup Preferences" "Check Hardware" "Quit")
     
     select opt in "${options[@]}"
     do
@@ -42,6 +42,24 @@ main() {
                 ;;
             "Install Wine & Winetricks")
                 bash "$(dirname "$0")/scripts/install-wine.sh"
+                break
+                ;;
+            "Install Self-Hosted Apps")
+                echo "Select an app to install:"
+                app_options=("Immich" "Back")
+                select app_opt in "${app_options[@]}"
+                do
+                    case $app_opt in
+                        "Immich")
+                            bash "$(dirname "$0")/scripts/apps/install-immich.sh"
+                            break
+                            ;;
+                        "Back")
+                            break
+                            ;;
+                        *) echo "Invalid option $REPLY";;
+                    esac
+                done
                 break
                 ;;
             "Check Hardware")
