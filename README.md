@@ -29,7 +29,10 @@
 
 ### 1. CLI ツールのインストール (Install CLI Tools)
 基本的なコマンドラインツール群をインストールします。
--   **Linux Mint Xfce**: `git`, `curl`, `wget`, `vim`, `emacs`, `htop`, `tmux`, `zsh`, `smartmontools`, `tlp`, `imagemagick`, `fzf`
+-   **Linux Mint Xfce**: `git`, `curl`, `wget`, `vim`, `emacs`, `htop`, `tmux`, `zsh`, `smartmontools`, `tlp`, `imagemagick`, `fzf`, `jq`, `xclip`, `build-essential`
+-   **エイリアス設定**:
+    -   `pbcopy`: `xclip -selection clipboard` (Mac風のクリップボードコピー)
+    -   `pbpaste`: `xclip -selection clipboard -o` (Mac風のクリップボードペースト)
 
 ### 2. 環境設定 (Setup Preferences)
 ターミナルでの作業を快適にするためのユーザー設定を行います。
