@@ -41,7 +41,7 @@
     -   ネットワーク情報 (`ip addr`)
     -   PCIデバイス情報 (`lspci` - VGA/Network)
     -   温度情報 (`sensors` - あれがインストールされている場合)
-    -   SMARTステータス (`smartctl` - `/dev/sda`、インストールされている場合)
+    -   SMARTステータス (`smartctl` - 検出された全ディスク `/dev/sd*`, `/dev/nvme*`)
 -   レポートは `hardware_reports/` ディレクトリに保存されます。
 
 ### 4. セルフホストアプリ (Self-Hosted Apps) [実装予定]

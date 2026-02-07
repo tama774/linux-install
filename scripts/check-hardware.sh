@@ -53,10 +53,13 @@ check_hardware() {
         fi
 
         if command -v smartctl &> /dev/null; then
-            echo "--- SMART Status (sda) ---"
-            sudo smartctl -H /dev/sda || echo "smartctl failed for /dev/sda"
+            echo "--- SMART Status ---"
+            for drive in $(lsblk -d -n -o NAME | grep -E '^(sd|nvme)'); do
+                echo "[Checking /dev/$drive]"
+                sudo smartctl -H "/dev/$drive" || echo "smartctl failed for /dev/$drive"
+                echo "--------------------------------"
+            done
             echo ""
-            # Add more drives as loop if needed
         else
             echo "--- SMART Status ---"
             echo "smartmontools not installed. Install it to check drive health."
