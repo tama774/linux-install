@@ -56,7 +56,7 @@ check_hardware() {
             echo "--- SMART Status ---"
             for drive in $(lsblk -d -n -o NAME | grep -E '^(sd|nvme)'); do
                 echo "[Checking /dev/$drive]"
-                sudo smartctl -H "/dev/$drive" || echo "smartctl failed for /dev/$drive"
+                sudo smartctl -a "/dev/$drive" || echo "smartctl reported issues or failed for /dev/$drive"
                 echo "--------------------------------"
             done
             echo ""
