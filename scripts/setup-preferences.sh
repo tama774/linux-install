@@ -16,6 +16,14 @@ setup_preferences() {
         info "Added setxkbmap to ~/.profile"
     fi
 
+    # Apply immediately
+    if command -v setxkbmap &> /dev/null; then
+        info "Applying Caps Lock/Control swap immediately..."
+        setxkbmap -option "ctrl:swapcaps"
+    else
+        warn "setxkbmap not found. Changes will take effect after installing x11-xkb-utils (usually part of X11)."
+    fi
+
     info "User preferences setup complete."
 }
 
