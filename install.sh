@@ -46,7 +46,7 @@ main() {
                 ;;
             "Install Self-Hosted Apps")
                 echo "Select an app to install:"
-                app_options=("Immich" "WordPress" "Back")
+                app_options=("Immich" "WordPress" "Growi" "Back")
                 select app_opt in "${app_options[@]}"
                 do
                     case $app_opt in
@@ -56,6 +56,10 @@ main() {
                             ;;
                         "WordPress")
                             bash "$(dirname "$0")/scripts/apps/install-wordpress.sh"
+                            break
+                            ;;
+                        "Growi")
+                            bash "$(dirname "$0")/scripts/apps/install-growi.sh"
                             break
                             ;;
                         "Back")

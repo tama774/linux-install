@@ -84,6 +84,10 @@
         -   WordPress と MariaDB のコンテナ構成を生成します。
         -   データベースパスワードを自動生成し、`.env` に保存します。
         -   デフォルトで `localhost:8080` で起動するように設定します。
+    -   **Growi**: 多機能な Wiki/ドキュメンテーションツール。
+        -   Growi, MongoDB, Elasticsearch のコンテナ構成を生成します。
+        -   `localhost:3000` で強力な Wiki システムを構築します。
+        -   Elasticsearch 用の `vm.max_map_count` の警告も表示します。
 
 ## ディレクトリ構成
 -   `install.sh`: メインのエントリーポイントとなるスクリプト。
