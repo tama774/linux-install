@@ -46,12 +46,16 @@ main() {
                 ;;
             "Install Self-Hosted Apps")
                 echo "Select an app to install:"
-                app_options=("Immich" "Back")
+                app_options=("Immich" "WordPress" "Back")
                 select app_opt in "${app_options[@]}"
                 do
                     case $app_opt in
                         "Immich")
                             bash "$(dirname "$0")/scripts/apps/install-immich.sh"
+                            break
+                            ;;
+                        "WordPress")
+                            bash "$(dirname "$0")/scripts/apps/install-wordpress.sh"
                             break
                             ;;
                         "Back")

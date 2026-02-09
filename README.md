@@ -80,6 +80,10 @@
     -   **Immich**: Google Photos 代替のフォトストレージ。
         -   `docker-compose.yml` と `.env` を自動ダウンロードします。
         -   データベースパスワードの自動生成や、画像の保存先設定 (`UPLOAD_LOCATION`) を対話的に行います。
+    -   **WordPress**: 世界で最も普及しているCMS。
+        -   WordPress と MariaDB のコンテナ構成を生成します。
+        -   データベースパスワードを自動生成し、`.env` に保存します。
+        -   デフォルトで `localhost:8080` で起動するように設定します。
 
 ## ディレクトリ構成
 -   `install.sh`: メインのエントリーポイントとなるスクリプト。
