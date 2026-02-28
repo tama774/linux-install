@@ -50,23 +50,6 @@ install_cli_tools() {
             info "Added pbcopy/pbpaste aliases to .zshrc"
         fi
     fi
-
-    info "Installing cloudflared..."
-    case "$distro" in
-        ubuntu|debian|linuxmint)
-            curl -fsSL https://pkg.cloudflare.com/cloudflare-main.gpg | sudo tee /usr/share/keyrings/cloudflare-main.gpg > /dev/null
-            echo "deb [signed-by=/usr/share/keyrings/cloudflare-main.gpg] https://pkg.cloudflare.com/cloudflared $(lsb_release -cs) main" | sudo tee /etc/apt/sources.list.d/cloudflared.list
-            sudo apt update
-            sudo apt install -y cloudflared
-            ;;
-        arch)
-            sudo pacman -S --noconfirm cloudflared
-            ;;
-        *)
-            error "cloudflared: Unsupported distribution: $distro"
-            ;;
-    esac
-    info "cloudflared installation complete."
 }
 
 if [[ "${BASH_SOURCE[0]}" == "${0}" ]]; then
